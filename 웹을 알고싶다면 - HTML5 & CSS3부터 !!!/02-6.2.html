@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>02장-6.2 각종 tag들을 이용한 실습2</title>
+    <style>
+      div {
+        background-color: green;
+      }
+      table {
+        height: 200px;
+      }
+      th {
+        height: 50px;
+        font-weight: bold;
+        font-size: 2em;
+      }
+      table,
+      th,
+      td {
+        border: 2px solid black;
+      }
+      a {
+        color: blue;
+      }
+      ul li {
+        list-style-type: desc;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>두번째 연습</h1>
+    <p>지금까지 배운 것을 정리해 봅시다.</p>
+    <br />
+    <h2>요약하기</h2>
+    <p>테이블을 적용하기 위해 <span style="color: red">&lttable&gt</span>요소 사용</p>
+    <p>목록화 하기 위해서 &ltul&gt과 &ltol&gt요소 사용</p>
+    <br />
+    <div>
+      <h2>실습</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>무순서 리스트</th>
+            <th>순서 리스트</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <ul>
+                <li><a href="https://www.daum.net" , target="_blank">Daum</a></li>
+                <li><a href="https://www.google.net" , target="_blank">Google</a></li>
+                <li><a href="https://www.naver.net" , target="_blank">NAVER</a></li>
+              </ul>
+            </td>
+            <td>
+              <h3>
+                국내 포털 순위<br />
+                (2017년 상반기)
+              </h3>
+              <ol>
+                <li><a href="https://www.naver.net" , target="_blank">Naver(87%)</a></li>
+                <li><a href="https://www.daum.net" , target="_blank">Daum(10%)</a></li>
+                <li><a href="https://www.google.net" , target="_blank">Google(0.36%)</a></li>
+              </ol>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
