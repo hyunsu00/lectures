@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>02장-4.4 HTML input 속성들</title>
+  </head>
+  <body>
+    <!-- value 속성은 <input> Tag에 초기값을 설정한다. -->
+    <form action="#" method="#">
+      이름: <input type="text" name="name" /><br />
+      국적: <input type="text" name="contry" value="대한민국" />
+    </form>
+    <!-- readonly 속성은 사용자가 수정할 수 없고 읽을 수만 있습니다. disabled 속성과의 차이점은 값이 서버로 전송됩니다. -->
+    <form action="#" method="#">
+      이름: <input type="text" name="name" /><br />
+      국적: <input type="text" name="contry" value="대한민국" readonly />
+    </form>
+    <!-- disabled 속성은 사용자가 아무것도 할 수 없고 클릭조차 안되게 합니다. readonly 속성과는 다르게, 값이 서버로 전송되지 않습니다. -->
+    <form action="#" method="#">
+      이름: <input type="text" name="name" /><br />
+      국적: <input type="text" name="contry" value="대한민국" disabled />
+    </form>
+    <!-- maxlength 속성은 사용자가 입력할 수 있는 텍스트의 최대길이를 설정합니다. -->
+    <form action="#" method="#">
+      이름: <input type="text" name="name" maxlength="5" />(다섯글자까지만 가능합니다)<br />
+      국적: <input type="text" name="contry" value="대한민국" readonly />
+    </form>
+    <!-- size 속성은 사용자가 입력할 수 있는 <input> Tag 의 크기를 설정합니다. -->
+    <form action="#" method="#">
+      이름: <input type="text" name="name" size="30" /><br />
+      국적: <input type="text" name="contry" value="대한민국" readonly />
+    </form>
+  </body>
+</html>

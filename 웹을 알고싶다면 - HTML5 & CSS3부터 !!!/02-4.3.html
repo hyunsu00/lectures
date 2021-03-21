@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>02장-4.3 HTML5에 새로 추가된 input</title>
+  </head>
+  <body>
+    <!-- 색상 설정 (color) -->
+    <form action="#" method="#">
+      색을 골라주세요:<br />
+      <input type="color" name="color" />
+    </form>
+    <br />
+    <!-- 날짜 입력 (date) -->
+    <form action="#" method="#">
+      날짜를 선택해주세요:<br />
+      <input type="date" name="date" />
+    </form>
+    <br />
+    <form action="#" method="#">
+      날짜를 선택해주세요:<br />
+      <!-- 
+				min 속성: 최소를 뜻하며, 2000-01-01이 최소이며 이전의 날짜들은 보이지 않게 된다.
+				max 속성: 최대를 뜻하며, 2020-12-31이 최대이며 이후의 날짜들은 보이지 않게 된다. 
+			-->
+      <input type="date" name="date" min="2000-01-01" max="2020-12-31" />
+    </form>
+    <br />
+    <!-- 시간 입력 (time) -->
+    <form action="#" method="#">
+      시간을 정해주세요:<br />
+      <input type="time" name="time" />
+    </form>
+    <br />
+    <!-- 날짜 & 시간 입력 (datetime-local) -->
+    <form action="#" method="#">
+      예약 날짜와 시간을 정해주세요:<br />
+      <input type="datetime-local" name="reservation" />
+    </form>
+    <br />
+    <!-- 연도 & 월 입력 (month) -->
+    <form action="#" method="#">
+      크리스마스는 몇월에 있을까요?:<br />
+      <input type="month" name="christmas_month" />
+    </form>
+    <br />
+    <!-- 연도 & 주 입력 (week) -->
+    <form action="#" method="#">
+      오늘은 몇년 몇번째주 입니까?:<br />
+      <input type="week" name="today_week" />
+    </form>
+    <br />
+    <!-- 숫자 입력 (number) -->
+    <form action="#" method="#">
+      당신이 가장 좋아하는 숫자를 골라주세요!!:<br />
+      <input type="number" name="number" />
+    </form>
+    <br />
+    <form action="#" method="#">
+      당신이 가장 좋아하는 숫자를 골라주세요!!:<br />
+      <!-- 
+				min 속성: 최소를 뜻하며, 1 이 최소이며 1 보다 작은 숫자들은 보이지 않게 된다.
+				max 속성: 최대를 뜻하며, 10 이 최대이며 10보다 들은 보이지 않게 된다. 
+			-->
+      <input type="number" name="number" min="1" max="10" />
+    </form>
+    <br />
+    <!-- 범위 지정 (range) -->
+    <form action="#" method="#">
+      당신이 가장 좋아하는 숫자를 골라주세요!!:<br />
+      <input type="range" name="range_number" />
+    </form>
+    <br />
+    <form action="#" method="#">
+      당신이 가장 좋아하는 숫자를 골라주세요!!:<br />
+      1<input type="range" name="range_number" min="1" max="9" />9
+    </form>
+    <br />
+    <!-- 전화번호 입력 (tel) -->
+    <form action="#" method="#">
+      전화번호를 입력해주세요!!:<br />
+      <input type="tel" name="telephone" />
+    </form>
+    <br />
+    <!-- 이메일 입력 (email) -->
+    <form action="#" method="#">
+      이메일을 입력해주세요!!:<br />
+      <input type="email" name="email" />
+      <input type="submit" value="전송" />
+    </form>
+    <br />
+    <!-- URL 입력 (url) -->
+    <form action="#" method="#">
+      url 주소를 입력해주세요!!:<br />
+      <input type="url" name="URL" />
+      <input type="submit" value="전송" />
+    </form>
+    <br />
+    <!-- 검색어 입력 (search) -->
+    <form action="#" method="#">
+      검색어를 입력해주세요!!:<br />
+      <input type="search" name="search" />
+      <input type="submit" value="전송" />
+    </form>
+  </body>
+</html>
