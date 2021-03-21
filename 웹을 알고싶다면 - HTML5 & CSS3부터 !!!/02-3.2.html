@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>02장-3.2 HTML iframe</title>
+  </head>
+  <body>
+    <!-- 
+			HTML iframe이란 inline frame의 약자로, 웹 페이지안에 또 다른 웹페이지를 삽입하는 것을 의미합니다.
+			사용법 : 
+				<iframe src="삽입하는 웹페이지 URL" title="내용"></iframe>
+					src : source의 약자로, 삽입하려는 웹페이지의 주소를 입력한다.
+					title : 웹 브라우저에게 해당 iframe이 어떤 iframe인지를 알린다. 이 속성은 필수사항은 아니지만 권장한다.
+					width, height 속성 사용
+					width, height 속성을 사용하면 iframe의 너비와 높이를 지정할 수 있다.
+
+ 			<iframe src="삽입하는 웹페이지 URL" title="내용" width="100%" height="300px"></iframe> 
+		-->
+    <h1>iframe을 이용하여 웹 페이지에 다른 웹 페이지 삽입하기</h1>
+    <iframe src="https://wikidocs.net/" title="내용" width="50%" height="300px"></iframe>
+    <!-- <iframe>Tag가 테두리를 가지거나. 테두리를 변경하거나, 테두리를 표현하고 싶지 않다면, style 속성을 활용합니다. -->
+    <h1>iframe을 이용하여 웹 페이지에 다른 웹 페이지 삽입하기</h1>
+    <iframe src="https://wikidocs.net/" title="내용" width="50%" height="300px" style="border: 2px dashed red"></iframe>
+    <h1>iframe을 이용하여 웹 페이지에 다른 웹 페이지 삽입하기</h1>
+    <iframe src="https://wikidocs.net/" title="내용" width="50%" height="300px" style="border: none"></iframe>
+    <!-- 
+			<a> (링크) Tag를 이용하여 iframe에 여러개의 웹 페이지 삽입하기
+			<a> Tag의 target 속성과 <iframe> Tag의 name 속성을 이용하면 여러개의 웹 페이지 삽입이 가능하다. 
+		-->
+    <ol>
+      <li><a href="https://wikidocs.net/" target="frame">위키독스</a></li>
+      <li><a href="https://ko.wikipedia.org/wiki/HTML" target="frame">위키트리 HTML5</a></li>
+    </ol>
+    <br />
+    <iframe src="https://ko.wikipedia.org/wiki/HTML" title="내용" name="frame" width="100%" height="300px"></iframe>
+  </body>
+</html>

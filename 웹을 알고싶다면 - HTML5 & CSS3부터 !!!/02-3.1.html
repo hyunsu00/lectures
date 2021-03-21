@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>02장-3.1 HTML block & inline</title>
+  </head>
+  <body>
+    <!-- 
+      블록(block) 형태
+      블록(block) 형태의 속성을 가진 Tag들은 말그대로 네모 블록(block) 모양을 가집니다.
+      항상 새로운 줄에서 시작하며, 해당 줄의 모든 너비를 차지합니다.
+
+      <div> Tag
+      블록(block) 형태의 속성을 가진 가장 대표적인 Tag로서
+        - 다른 HTML Tag들을 하나로 묶는 데 자주 사용합니다
+        - 하나로 묶인 다른 HTML Tag에 CSS 스타일을 한번에 적용하는데 자주 사용합니다 
+      블록(block) 형태의 대표적인 Tags
+        <div>, <p>, <ol>, <ul>, <li>, <h#>, <pre>, <blockquote>, <form>, <table>, <header>
+        <nav>, <section>, <article>, <aside>, <footer>, <video>, <dl>, <dt>, <dd>, <noscript>
+    -->
+    <div slot="border:1px solid black;">
+      <h1 style="text-align: center">HTML5 & CSS3</h1>
+      <p>HTML5와 CSS3를 공부하자</p>
+    </div>
+    <!-- 
+      인라인(inline) 형태
+      인라인(inline) 형태의 속성을 가진 Tag들은 새로운 줄에서 시작하지 않으며, 해당 줄의 너비는 내용만큼만 가집니다.
+
+      <span> Tag
+      인라인(inline) 형태의 속성을 가진 가장 대표적인 Tag로서
+        - 텍스트의 특정부분을 강조하는데 자주 사용합니다.
+        - 텍스트의 특정부분에 CSS 스타일을 적용하기 위해 자주 사용합니다. 
+      인라인(inline) 형태의 대표적인 Tags
+        <span>, <a>, <q>, <b>, <em>, <small>, <strong>, <sup>, <sub>, <input>, <img>
+        <br>, <big>, <select>, <i>, <button>, <code>, <textarea>, <map>, <mark>, <script>
+    -->
+    <p>우리는 <span style="color: red">HTML5 & CSS3</span>를 공부하고 있습니다.</p>
+  </body>
+</html>

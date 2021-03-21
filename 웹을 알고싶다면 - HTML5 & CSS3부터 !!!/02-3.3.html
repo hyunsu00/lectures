@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>02장-3.3 HTML Semantic</title>
+    <style>
+      header {
+        background-color: lightgrey;
+        height: 100px;
+      }
+      nav {
+        background-color: lightgrey;
+        height: 50px;
+      }
+      main {
+        width: 100%;
+        height: 400px;
+        margin-top: 20px;
+        overflow: hidden;
+        border: 1px solid red;
+      }
+      section {
+        width: 50%;
+        background-color: lightgrey;
+        height: 150px;
+      }
+      article {
+        width: 60%;
+        margin-left: 100px;
+        background-color: yellow;
+        height: 100px;
+      }
+      aside {
+        float: right;
+        position: relative;
+        top: 0;
+        right: 0;
+        width: 40%;
+        margin-left: 5px;
+        height: 600px;
+        background-color: lightgrey;
+        height: 150px;
+      }
+      footer {
+        background-color: lightgrey;
+        height: 100px;
+      }
+      header,
+      nav,
+      section,
+      article,
+      footer,
+      aside {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+			HTML5에서는 웹 페이지의 레이아웃만을 위한 별도의 새로운 Tag들을 제공합니다. 이 Tag들을 의미(Semantic) Tag라고 합니다.
+			의미(Semantic) Tag
+				의미(Semantic) Tag란 말 웹브라우저나 개발자에게 명확한 의미를 전달하는 Tag 입니다. 
+				예를 들어 <header> Tag를 보면 의미적으로 헤더를 정의하고 웹브라우저, 개발자에게 헤더부분이라고 명시하는 역할을 합니다.
+				하지만 주의할 점은 <header> Tag를 쓴다고 해서 밑의 그림처럼 레이아웃을 만들어주지 않습니다. 
+					단지 의미를 부여할 뿐 레이아웃은 CSS3로 작업합니다.
+
+				HTML5에서 추가된 의미(Semantic) Tag
+					<header> : HTML 헤더나 section에 헤더를 정의함.
+					<nav> HTML 메뉴바를 정의함.
+					<main> : HTML 전체 Content를 정의함.
+					<section> : HTML Section을 정의함.
+					<article> HTML 하나의 글(aricle)을 정의함.
+					<aside> 웹 페이지에서 배너나 추가적인 문구 등을 정의함.
+					<footer> : HTML Footer를 정의함. 
+		-->
+    <header>
+      <h3>header 부분입니다.</h3>
+    </header>
+    <nav>
+      <h3>nav 부분입니다.</h3>
+    </nav>
+    <main>
+      <aside>
+        <p>aside 부분입니다.</p>
+      </aside>
+      <section>
+        <p>section1 부분입니다</p>
+        <article>
+          <p>article1 부분입니다</p>
+        </article>
+      </section>
+      <section>
+        <p>section2 부분입니다</p>
+        <article>
+          <p>article2 부분입니다</p>
+        </article>
+      </section>
+    </main>
+    <footer>
+      <h3>footer 부분입니다.</h3>
+    </footer>
+  </body>
+</html>
