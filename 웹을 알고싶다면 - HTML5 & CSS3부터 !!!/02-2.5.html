@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Links</title>
+  </head>
+  <body>
+		<!-- 
+			<a>: anchor의 약자이며 하이퍼링크를 의미한다.
+			위키독스: 브라우저에서 URL이 보여지는것이 아니라 위키독스라는 텍스트가 보여지며 위키독스를 클릭했을 때 해당 URL을 통해 문서가 열린다.
+			href: <a> tag에서 가장 중요한 속성이며 Hypertext Refernce의 약자이다. 또한, 연결할 주소를 지정 한다.
+		 -->
+    <a href="https://wikidocs.net/">위키독스</a> <br />
+		<!-- 
+			target Attribute(속성)
+			기본적으로 <a> tag를 클릭했을 때 현재 창에서 해당 주소 창이 열린다. 이를 변경해주기 위해 target이라는 속성이 필요하다.
+
+			_self: 디폴트 값으로서, 현재 창에서 해당 주소 문서 창/탭 이 열린다.
+			_blank: 현재 창이 아니라 새 창/탭에서 해당 주소 문서 연다.
+			_parent: 현재 보다 상위 프레임에서 해당 주소 문서 연다.
+			_top: Root 프레임에서 해당 주소 문서 . 
+		-->
+		<!-- 
+			Link State(상태)
+			HTML링크는 4가지의 상태로 정의할 수 있습니다.
+			1. link	: 한번도 방문한적 없는 상태.(디폴트 값)
+			2. visited : 한번이라도 방문한 상태.
+			3. hover :	링크위에 마우스를 올려놓은 상태.
+			4. active :	링크를 마우스로 누른 상태.
+
+			<a></a>로 싸여진 텍스트는 밑줄이 그어져 있으며 기본적으로는
+			link 상태의 경우, 파란색의 색깔을 띄고 있다.
+			visited 상태의 경우, 보라색의 색깔을 띄고 있다.
+			active 상태의 경우, 빨간색의 색깔을 띄고 있다.
+			hover 상태의 경우, CSS3으로 사용자가 지정. 
+		-->
+    <p>
+			<abbr title="디폴트 값으로서, 현재 창에서 해당 주소 문서 창/탭 이 열린다.">
+				<a href="https://wikidocs.net/" target="_self">위키독스</a>
+			</abbor>
+		</p>
+    <p>
+			<abbr title="현재 창이 아니라 새 창/탭에서 해당 주소 문서 연다.">
+			<a href="https://wikidocs.net/" target="_blank">위키독스</a>
+			</abbr>
+		</p>
+    <p>
+			<abbr title="현재 보다 상위 프레임에서 해당 주소 문서 연다.">
+			<a href="https://wikidocs.net/" target="_parent">위키독스</a>
+			</abbr>
+		</p>
+    <p>
+			<abbr title="Root 프레임에서 해당 주소 문서">
+			<a href="https://wikidocs.net/" target="_top">위키독스</a>
+			</abbr>
+		</p>
+		<!-- 
+			HTML Link를 이용한 Bookmarker
+			Bookmarker(책갈피)란 링크를 눌렀을 때 본문에서 href가 가리키는 section으로 이동한다.
+			Bookmarker를 사용하기 위해서는 <a> tag에 id속성이나 name속성을 사용하여야 한다. 
+		-->
+    <p>
+			<a href="#article">기사보러 가기 - topic2로 이동</a>
+		</p>
+    <p>
+			<a href="#HTML">HTML 보기</a>
+		</p>
+    <hr />
+
+    <h2 id="one">제목 1</h2>
+    <p>문단 1 입니다</p>
+    <hr />
+
+    <h2 id="two">제목 2</h2>
+    <p>문단 2 입니다</p>
+    <hr />
+
+    <h2 id="three">제목 3</h2>
+    <p>문단 3 입니다</p>
+    <hr />
+
+    <h2 id="HTML">HTML5</h2>
+    <p>HTML 5입니다</p>
+    <hr />
+
+    <h2 id="four">제목 4</h2>
+    <p>문단 4 입니다</p>
+    <hr />
+
+    <h2 id="five">제목 5</h2>
+    <p>문단 5 입니다</p>
+    <hr />
+
+    <h2 id="C">C 언어</h2>
+    <p>c언어 입니다.</p>
+    <hr />
+
+    <h2 id="java">JAVA</h2>
+    <p>JAVA 입니다.</p>
+    <hr />
+
+    <h2 id="Python">Python</h2>
+    <p>Python 입니다</p>
+    <hr />
+
+    <h2 id="Linux">Linux</h2>
+    <p>Linux 입니다</p>
+    <hr />
+
+    <h2 id="Pascal">Pascal</h2>
+    <p>Pascal 입니다</p>
+    <hr />
+
+    <h2 id="CSS">CSS3</h2>
+    <p>CSS3입니다</p>
+
+    <h1><a name="article"></a>topic2</h1>
+    <p>topic2 입니다</p>
+    <hr />
+  </body>
+</html>
