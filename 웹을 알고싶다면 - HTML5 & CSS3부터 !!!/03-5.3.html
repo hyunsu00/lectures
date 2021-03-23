@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>배경 이미지 반복 여부 및 방향</title>
+    <style>
+      .bgr {
+        background-color: red;
+        color: white;
+        font-size: 14pt;
+      }
+      /* 
+      배경 이미지 반복 여부 및 방향
+        (가로방향)background-repeat : repeat-x;
+        (세로방향)background-repeat : repeat-y;
+        (반복 안함)background-repeat : no-repeat; 
+      */
+      .bgx {
+        background-image: linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)),
+          url("https://mblogthumb-phinf.pstatic.net/MjAxODA1MDhfMjQw/MDAxNTI1NzkwMDY5ODMw.1-BfvtDyIco_Jo3NALRid01DykWFUsk2Wy5kF-pCDAUg.2xXq9RAeej9QPMCBG-LTJX6H9kvYjt7QM8SNpFlNTJMg.GIF.kissdy486/P20180409_012848999_1B44D3BF-4F59-44CA-953D-FB6FAA3CA3D5.GIF?type=w800");
+        background-repeat: repeat-x;
+      }
+      .bgy {
+        background-image: linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)),
+          url("https://mblogthumb-phinf.pstatic.net/MjAxODA1MDhfMjQw/MDAxNTI1NzkwMDY5ODMw.1-BfvtDyIco_Jo3NALRid01DykWFUsk2Wy5kF-pCDAUg.2xXq9RAeej9QPMCBG-LTJX6H9kvYjt7QM8SNpFlNTJMg.GIF.kissdy486/P20180409_012848999_1B44D3BF-4F59-44CA-953D-FB6FAA3CA3D5.GIF?type=w800");
+        background-repeat: repeat-y;
+      }
+      .bgn {
+        background-image: linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)),
+          url("https://mblogthumb-phinf.pstatic.net/MjAxODA1MDhfMjQw/MDAxNTI1NzkwMDY5ODMw.1-BfvtDyIco_Jo3NALRid01DykWFUsk2Wy5kF-pCDAUg.2xXq9RAeej9QPMCBG-LTJX6H9kvYjt7QM8SNpFlNTJMg.GIF.kissdy486/P20180409_012848999_1B44D3BF-4F59-44CA-953D-FB6FAA3CA3D5.GIF?type=w800");
+        background-repeat: no-repeat;
+      }
+    </style>
+  </head>
+  <body>
+    <span class="bgr">repeat-x : 가로로 반복</span><br />
+    <textarea cols="50" rows="10" class="bgx"> </textarea><br />
+    <span class="bgr">repeat-y : 세로로 반복</span><br />
+    <textarea cols="50" rows="10" class="bgy"> </textarea><br />
+    <span class="bgr">no-repeat : 반복 없음</span><br />
+    <textarea cols="50" rows="10" class="bgn"> </textarea>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>배경 이미지 위치 표기</title>
+    <style>
+      /* 
+      배경 이미지 반복 여부 및 방향
+        (가로방향)background-repeat : repeat-x;
+        (세로방향)background-repeat : repeat-y;
+        (반복 안함)background-repeat : no-repeat; 
+      */
+      .bgi {
+        background-image: url("https://mblogthumb-phinf.pstatic.net/MjAxODA1MDhfMjQw/MDAxNTI1NzkwMDY5ODMw.1-BfvtDyIco_Jo3NALRid01DykWFUsk2Wy5kF-pCDAUg.2xXq9RAeej9QPMCBG-LTJX6H9kvYjt7QM8SNpFlNTJMg.GIF.kissdy486/P20180409_012848999_1B44D3BF-4F59-44CA-953D-FB6FAA3CA3D5.GIF?type=w800");
+        background-position: 10px 30px;
+        background-repeat: no-repeat;
+      }
+      /* 
+      == 
+      축약한 예시
+        속성들을 축약하기
+          background : #ffffff url('이미지 URL주소) no-repeat right top
+      */
+      /* 
+      .bgi {
+        background: url("https://mblogthumb-phinf.pstatic.net/MjAxODA1MDhfMjQw/MDAxNTI1NzkwMDY5ODMw.1-BfvtDyIco_Jo3NALRid01DykWFUsk2Wy5kF-pCDAUg.2xXq9RAeej9QPMCBG-LTJX6H9kvYjt7QM8SNpFlNTJMg.GIF.kissdy486/P20180409_012848999_1B44D3BF-4F59-44CA-953D-FB6FAA3CA3D5.GIF?type=w800"),
+          no-repeat, 10px 30px;
+      } 
+      */
+    </style>
+  </head>
+  <body class="bgi">
+    배경 이미지 위치 표기
+  </body>
+</html>
