@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>03장-6 경계선(Border) 다루기 - 경계선 선 색깔(color) 지정</title>
+    <style>
+      /* 
+      경계선 선 색깔(color) 지정
+        경계선 위쪽 색깔(color) 지정 : border-top-color
+        경계선 오른쪽 색깔(color) 지정 : border-right-color
+        경계선 아래쪽 색깔(color) 지정 : border-bottom-color
+        경계선 왼쪽 색깔(color) 지정 : border-left-color        
+        경계선 한꺼번에 색깔(color)지정 : border-color
+
+        반드시 border-style 과 함께 사용해야 한다. 
+      */
+      /* 
+      속성
+        color : 색상명;
+        color : rgb(255, 99 ,71);
+        color : #ff6347
+        color : hsl(9, 100%, 64%
+        color : rgba(255, 99 ,71, 0.6);
+      */
+      /* 각각의 경계선에 대해 세세히 지정 */
+      .one {
+        width: 300px;
+        border-style: solid;
+        border-top-color: red;
+        border-right-color: green;
+        border-bottom-color: blue;
+        border-left-color: yellow;
+      }
+      /* 한꺼번에 하나의 속성 지정 */
+      .two {
+        width: 300px;
+        border-style: solid;
+        border-color: green;
+      }
+      /* 한꺼번에 여러개의 속성 지정 */
+      /* border-color: (위쪽 경계선 속성) (오른쪽 경계선 속성) (아래쪽 경계선 속성) (왼쪽 경계선 속성); 시계방향으로 속성을 설정한다. */
+      .three {
+        width: 300px;
+        border-style: solid;
+        border-color: red green blue yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="one">1번 경계선(border)</div>
+    <br /><br />
+    <div class="two">2번 경계선(border)</div>
+    <br /><br />
+    <div class="three">3번 경계선(border)</div>
+    <br /><br />
+  </body>
+</html>

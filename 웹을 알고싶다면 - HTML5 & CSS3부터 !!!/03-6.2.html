@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>03장-6 경계선(Border) 다루기 - 경계선 선 두께(width) 지정</title>
+    <style>
+      /* 
+			경계선 선 두께(width) 지정
+				경계선 위쪽 두께(style) 지정 : border-top-width
+				경계선 오른쪽 두께(style) 지정 : border-right-width
+				경계선 아래쪽 두께(style) 지정 : border-bottom-width
+				경계선 왼쪽 두께(style) 지정 : border-left-width
+				경계선 한꺼번에 두께(style) 지정 : border-width
+				
+				반드시 border-style 과 함께 사용해야 한다. 
+			*/
+      /* 
+			속성
+				thin, medium, thick
+				px, pt, em 
+			*/
+      /* 각각의 경계선에 대해 세세히 지정 */
+      .mix {
+        width: 300px;
+        border-style: solid;
+        border-top-width: thin;
+        border-right-width: thick;
+        border-bottom-width: medium;
+        border-left-width: 16px;
+      }
+      /* 한꺼번에 하나의 속성 지정 */
+      .one {
+        width: 300px;
+        border-style: solid;
+        border-width: 16px;
+      }
+      /* 한꺼번에 여러개의 속성 지정 */
+      /* border-width: (위쪽 경계선 속성) (오른쪽 경계선 속성) (아래쪽 경계선 속성) (왼쪽 경계선 속성); 시계방향으로 속성을 설정한다. */
+      .two {
+        width: 300px;
+        border-style: solid;
+        border-width: 2px 10px 4px 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="mix">1번 경계선(border)</div>
+    <br /><br />
+    <div class="one">2번 경계선(border)</div>
+    <br /><br />
+    <div class="two">3번 경계선(border)</div>
+    <br /><br />
+  </body>
+</html>

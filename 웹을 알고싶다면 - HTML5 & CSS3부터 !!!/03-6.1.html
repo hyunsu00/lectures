@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>03장-6 경계선(Border) 다루기 - 경계선 선 모양(style) 지정</title>
+    <style>
+      /* 
+			경계선은 크게 3가지를 설정해준다.
+				선 모양 : style
+				선 두께 : width
+				선 색깔 : color 
+			*/
+      /* 
+			계선 선 모양(style) 지정
+				경계선 위쪽 모양(style) 지정 : border-top-style
+				경계선 오른쪽 모양(style) 지정 : border-right-style
+				경계선 아래쪽 모양(style) 지정 : border-bottom-style
+				경계선 왼쪽 모양(style) 지정 : border-left-style
+				경계선 한꺼번에 모양(style) 지정 : border-style 
+			*/
+      /* 
+			속성
+				none : 기본값(모양 없음)
+				hidden : 경계선 숨김
+				solid : 실선
+				double : 두줄
+				groove : 선이 안쪽으로 들어간 느낌
+				ridge : 선이 바깥으로 튀어나온 느낌
+				inset : 내용이 안으로 들어간 느낌
+				outset : 내용이 밖으로 나온 느낌
+				dashed : 긴 점선
+				dotted : 짧은 점선 
+			*/
+      /* 각각의 경계선에 대해 세세히 지정 */
+      .one {
+        width: 300px;
+        border-top-style: inset;
+        border-right-style: inset;
+        border-bottom-style: inset;
+        border-left-style: inset;
+      }
+      .two {
+        width: 300px;
+        border-top-style: solid;
+        border-right-style: solid;
+        border-bottom-style: dashed;
+        border-left-style: solid;
+      }
+      .three {
+        width: 300px;
+        border-top-style: ridge;
+        border-right-style: ridge;
+        border-bottom-style: ridge;
+        border-left-style: ridge;
+      }
+      /* 한꺼번에 하나의 속성 지정 */
+      .four {
+        width: 300px;
+        border-style: outset;
+      }
+      /* 한꺼번에 여러개의 속성 지정 */
+      /* border-style: (위쪽 경계선 속성) (오른쪽 경계선 속성) (아래쪽 경계선 속성) (왼쪽 경계선 속성); 시계방향으로 속성을 설정한다. */
+      .mix {
+        width: 300px;
+        border-style: dotted dashed solid double;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="one">1번 경계선(border)</div>
+    <br /><br />
+    <div class="two">2번 경계선(border)</div>
+    <br /><br />
+    <div class="three">3번 경계선(border)</div>
+    <br /><br />
+    <div class="four">4번 경계선(border)</div>
+    <br /><br />
+    <div class="mix">5번 경계선(border)</div>
+    <br /><br />
+  </body>
+</html>

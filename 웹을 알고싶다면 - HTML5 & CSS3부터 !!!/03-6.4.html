@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>03장-6 경계선(Border) 다루기 - 경계선 속성 축약하기</title>
+    <style>
+      /* 
+      경계선 속성 축약하기
+        border: 1px solid black; (경계선은 검은색 실선이며 두께가 1px로 설정한다.) 
+      */
+      .all {
+        width: 300px;
+        border: 1px solid black;
+      }
+      .top {
+        width: 300px;
+        border-top: 5px solid red;
+      }
+      .right {
+        width: 300px;
+        border-top: 3px solid green;
+      }
+      .bottom {
+        width: 300px;
+        border-top: 10px dashed red;
+      }
+      .left {
+        width: 300px;
+        border-top: 3px solid green;
+      }
+      /* 
+      둥근 경계선
+        border-radius 속성을 사용한다.
+        속성 값으로 px을 사용하여 둥근정도를 설정한다. 
+      */
+      .radius {
+        width: 300px;
+        border: 1px solid black;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="all">모든 경계선(border)</div>
+    <br /><br />
+    <div class="top">위쪽 경계선(border)</div>
+    <br /><br />
+    <div class="right">오른쪽 경계선(border)</div>
+    <br /><br />
+    <div class="bottom">아래쪽 경계선(border)</div>
+    <br /><br />
+    <div class="left">왼쪽 경계선(border)</div>
+    <br /><br />
+    <div class="radius">둥근 모든 경계선(border)</div>
+    <br /><br />
+  </body>
+</html>
