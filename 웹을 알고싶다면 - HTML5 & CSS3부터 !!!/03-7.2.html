@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>03장-7.2 Font 다루기</title>
+    <style>
+      /* 
+			글꼴 지정
+				font-family : 글꼴명;
+			글자크기 지정
+				font-size : 크기(숫자+단위);
+			글꼴 스타일
+				font-style : normal, italic;
+			글꼴 굵기
+				font-weight : normal, bold;
+			글자간격 지정
+				letter-spacing : 숫자px;
+			글자 색상 지정
+				color : 색상명 ;
+			글자꾸밈효과 지정
+				text-decoration : none, underline, line-through, overline 
+			*/
+      #family {
+        font-family: 궁서체;
+      }
+      #size {
+        font-size: 30px;
+      }
+      #style {
+        font-style: italic;
+      }
+      #weight {
+        font-weight: bold;
+      }
+      #space {
+        letter-spacing: 10px;
+      }
+      #color {
+        color: red;
+      }
+      #over {
+        text-decoration: overline;
+      }
+      #under {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="family">
+      <h2>글꼴 지정</h2>
+    </div>
+    <div id="size">
+      <p>글자 크기를 30px로 키워보자</p>
+    </div>
+    <div id="style">
+      <p>이탤릭체로 바꾸어보자</p>
+    </div>
+    <div id="weight">
+      <p>글자 굵기를 굵게 하자</p>
+    </div>
+    <div id="space">
+      <p>글자 간격을 10px로 하자</p>
+    </div>
+    <div id="color">
+      <p>글자 색상을 빨간색으로!</p>
+    </div>
+    <div>
+      <p id="over">글자 위에 overline</p>
+      <br />
+      <p id="under">글자 밑에 underline</p>
+    </div>
+  </body>
+</html>

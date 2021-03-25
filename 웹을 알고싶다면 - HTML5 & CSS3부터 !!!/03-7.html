@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>03장-7 박스 모델</title>
+    <style>
+      /* 
+			모든 HTML Tag들은 block 또는 inline 형태를 가진다. 이러한 모든 HTML Tag들은 박스(box)로 여겨질 수 있으며 박스모델이라고 한다, CSS3에서 디자인과 레이아웃 관해서 말할 때 사용된다.
+				Margin : 경계선으로부터 바깥 여백
+				Border : 경계선
+				Padding : 경계선으로부터 안쪽 여백
+				Content : 사용자에게 보여지는 내용 
+			*/
+      div {
+        background-color: gray;
+        width: 300;
+        border: 25px solid red;
+        padding: 25px;
+        margin: 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Box</h2>
+    <p>box의 구성부분</p>
+    <div>Content</div>
+  </body>
+</html>

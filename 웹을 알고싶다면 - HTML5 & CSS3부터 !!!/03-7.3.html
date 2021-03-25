@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>03장-7.3 Text 다루기</title>
+    <style>
+      /* 
+      가로방향 정렬
+        text-align : left, center, right;
+      세로방향 정렬
+        vertical-align : top, middle, bottom;
+      들여쓰기
+        text-indent : 숫자px;
+      줄 간격
+        line-height : 숫자px;
+      줄바꿈 방지
+        white-space : normal, nowrap;
+      대소문자 설정
+        text-transform : uppercase, lowercase, capitalize; 
+      */
+      #align {
+        width: 500px;
+        height: 100px;
+        border: 1px solid red;
+        text-align: center;
+      }
+      #indent {
+        text-indent: 10px;
+      }
+      #line-height {
+        line-height: 50px;
+      }
+      #white-space {
+        white-space: nowrap;
+      }
+      #transform {
+        text-transform: uppercase;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="align">
+      <h2>중앙정렬</h2>
+    </div>
+    <div>
+      <p>그냥 쓰기</p>
+      <p>그냥 쓰기</p>
+      <p id="indent">들여쓰기</p>
+      <p>그냥 쓰기</p>
+    </div>
+    <hr />
+    <div id="line-height">
+      <p>줄간격 50px로 바꾸어보자</p>
+      <p>줄간격 50px로 바꾸어보자</p>
+    </div>
+    <hr />
+    <div id="white-space">
+      <p>Text 관련 스타일을 연습하고 있습니다. white-space : no-wrap은 창의 크기가 아무리 줄어들어도 줄바꿈을 방지합니다.</p>
+    </div>
+    <hr />
+    <div>
+      <p><span id="transform">html</span>5를 대문자로 변형합니다.</p>
+    </div>
+  </body>
+</html>
