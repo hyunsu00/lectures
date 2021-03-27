@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>04장 HTML5 & CSS3를 이용하여 웹페이지 만들기</title>
+		<link href="https://fonts.googleapis.com/css?family=Lobster&amp;display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Single+Day&amp;display=swap&amp;subset=korean" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Nanum+Brush+Script&amp;display=swap&amp;subset=korean" rel="stylesheet">
+		<style>
+			body {
+				margin:0 auto;
+				padding:0;
+				background-color:rgb(231, 224, 192);
+			}
+			/* HTML 헤더 CSS */
+			header {
+				min-width:800%;
+				height:100px;
+				border-bottom:1px solid black;
+				overflow:hidden;
+				padding:10px 10px;
+				line-height:30px;
+			}
+			header div {
+				float:left;
+				font-family: 'Lobster', cursive;
+				text-align:center;
+				font-size:1.5em;
+				color:black;
+				text-align:center;
+				margin-left:550px;
+				color:black;
+			}
+
+			li {
+				list-style:none;
+			}
+			a {
+				text-decoration:none;
+				color:black;
+			}
+			a:hover {
+				color:hotpink;
+			}
+			span {
+				font-size:1.5em;
+			}
+			audio {
+				max-width:200px;
+				height:50px;
+			}
+
+			/* HTML 메뉴바 CSS */
+			nav {
+				min-width:800%;
+				height:50px;
+				border:1px solid black;
+			}
+			nav ul {
+				overflow:hidden;
+			}
+			nav ul li {
+				display:block;
+				padding:0 120px;
+				border-right:1px solid black;
+				float:left;
+				box-sizing:border-box;  
+			}
+			nav ul li a:hover {
+				color:red;
+				opacity:0.7;
+			}
+			nav ul li:last-child {
+				border:none;
+			}
+
+			/* HTML Content CSS */
+			main {
+				min-width:800%;
+				margin-top:10px;
+				height:300px;
+		
+				overflow:hidden;
+				position:relative;
+			}
+			main div:nth-child(1) {
+				margin:20px;
+				float:left;
+			}
+			main div:nth-child(2) {
+				margin-left:20px;
+				float:left;
+				white-space:nowrap;
+			}
+			main div:nth-child(3) {
+				float:right;
+				position:absolute;
+				left:1000px;
+				top:0px;
+			}
+			main div p {
+				line-height:50px;
+			}
+
+			/* HTML Fotter CSS */
+			footer {
+				min-width:800px;
+				margin-top:10px;
+				height:100px;
+				border-top:1px solid black;
+				overflow:hidden;
+			}
+			footer div:nth-child(1) {
+				float:left;
+			}
+			footer div:last-child {
+				margin-left:30px;
+				font-weight:bold;
+				line-height:35px;
+				font-size:1.5em;
+				float:left;
+				font-family: 'Nanum Brush Script', cursive;
+			}
+		</style>
+  </head>
+		<!-- HTML 헤더 설정 -->
+    <header>
+			<div>
+				<h1><a href="#">My Hobbies</a></h1>
+			</div>
+		</header>
+		<!-- HTML 메뉴바 정의 -->
+    <nav>
+			<ul>
+				<li><a href="#">Music</a></li>
+				<li><a href="#">Movie</a></li>
+				<li><a href="#">Sports</a></li>
+				<li><a href="#">travel</a></li>
+			</ul>
+		</nav>
+		<div id="search">
+			<div>
+				<form action="#" method="POST">
+					<input style="width:1000px; height:50px;" type="text" name="search_user" placeholder="찾고싶으신 회원 ID를 입력해주세요!!"/>
+					<input type="submit" value="검색하기" />	
+				</form>	
+			</div>
+		</div>
+		<main>
+			<div>
+        <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxODEyMTdfMjIz%2FMDAxNTQ1MDI1MTQwMDYy.aK7FI6-4Pu8nmPzXrCLLTJ471S-R0V4lkVF1XJBoh8wg.oU9I5Yx59Ep1uEfh1hmXDpiB2Qz-1IVAo6h5mRFbkc0g.PNG.wdb10004%2F1919.png&amp;type=b400" width="200px" height="200px">
+    	</div>
+			<div>
+				<h2>반갑습니다!! <span style="color: green;" >My Hobbies</span><sup><small>1)사이트 이름</small></sup> 입니다.</h2>
+				<h3>이 페이지는 서로의 <span><mark>취미</mark></span> 를 공유하는 <blink>사이트</blink> 입니다.</h3>
+				<p>
+					<blockquote><span>취미(趣味, 영어: hobby)</span>는 인간이 금전이 아닌 기쁨을 얻기 위해 하는 활동</blockquote>
+					<br>
+					즉, 전문적으로 하는 것이 아니라 즐기기 위하여 하는 일로써 일반적으로 여가에 즐길 수 있는 
+					정기적인 활동이라고 정의할 수 있다.
+					<br>
+					취미에 아주 열심인 사람은 <ins>호비스트</ins> (hobbyist)라고 부른다. 
+					<a href="#"><span style="font-weight:bold;">글쓰기 클릭!!</span></a>
+				</p>
+			</div>
+			<div>
+				<audio src="#" type="audio/mp3" autoplay="" controls=""></audio>
+			</div>
+		</main>
+    <footer>
+			<div>
+				<a href="#" target="_blank">
+					<img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxODEyMTdfMjIz%2FMDAxNTQ1MDI1MTQwMDYy.aK7FI6-4Pu8nmPzXrCLLTJ471S-R0V4lkVF1XJBoh8wg.oU9I5Yx59Ep1uEfh1hmXDpiB2Qz-1IVAo6h5mRFbkc0g.PNG.wdb10004%2F1919.png&amp;type=b400" width="300px" height="100px">
+				</a>
+			</div>
+			<div>
+				<p>
+					이름: 홍 길 동<br>
+					소속: 취미 공유 사이트 
+				</p>
+			</div>
+		</footer>
+  </body>
+</html>
