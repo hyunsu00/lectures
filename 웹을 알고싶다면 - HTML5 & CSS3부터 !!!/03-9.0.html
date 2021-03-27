@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>03장-9 display 속성</title>
+    <style>
+      /* 
+			display 속성은 레이아웃을 제어하기 위한 중요한 속성입니다. 
+			예를들어, block 형태를 띄는 Tag들에게 display : inline 속성을 주면 inline형태로 사용자에게 보여지고 
+			반대로 inline 형태를 띄는 Tag들에게 display : block 속성을 주면 block형태로 사용자에게 보여집니다.
+				none : 제거하지 않고 숨긴다
+				inline : 필요한 폭만 가진다
+				block : 새 줄에서 시작하며 브라우저 전체 폭을 차지한다 
+			*/
+      div li {
+        display: inline;
+      }
+      div span {
+        display: block;
+      }
+      div a {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>서울</li>
+      <li>대구</li>
+      <li>인천</li>
+    </ul>
+    여기는 <span>대구</span>입니다.
+    <a href="#">test</a>
+    <p>display 속성 적용후</p>
+    <div>
+      <ul>
+        <li>서울</li>
+        <li>대구</li>
+        <li>인천</li>
+      </ul>
+      여기는 <span>대구</span>입니다.
+      <a href="#">test</a>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>03장-8.1 레이아웃 순서지정 / 숨김</title>
+    <style>
+      h2 {
+        width: 300px;
+        height: 300px;
+      }
+      /*
+      레이아웃이 겹쳐져 있을 때 레이아웃에게 순서를 주어 어떤 레이아웃이 제일 위로 오게할 것인지 정해야 한다.
+      	Z-index : 숫자(정수): 숫자가 높을수록 위로 올라온다.
+      	position과 함께 사용해야한다.
+      */
+      .one {
+        width: 300px;
+        height: 200px;
+        border: 1px solid black;
+        background-color: gray;
+        position: absolute;
+        top: 110px;
+        left: 50px;
+        z-index: 1;
+      }
+      .two {
+        width: 300px;
+        height: 200px;
+        border: 1px solid red;
+        background-color: yellow;
+        position: absolute;
+        top: 60px;
+        left: 30px;
+        z-index: 0;
+      }
+      /* 
+			숨김
+				visibility속성을 이용하면 해당 요소를 보이게 하거나 숨길 수 있다.
+
+			속성값에는
+				hidden (안보일뿐 그자리에 존재한다)
+				visible (디폴트 값) 
+			*/
+      .three {
+        width: 300px;
+        height: 200px;
+        border: 1px solid black;
+        background-color: gray;
+        position: absolute;
+        top: 410px;
+        left: 50px;
+        z-index: 1;
+      }
+      .four {
+        width: 300px;
+        height: 200px;
+        border: 1px solid red;
+        background-color: yellow;
+        position: absolute;
+        top: 380px;
+        left: 30px;
+        z-index: 0;
+        visibility: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>z-index</h2>
+    <div class="one">
+      <p>가장 위로 올라온다.</p>
+    </div>
+    <div class="two">
+      <p>밑으로 내려간다.</p>
+    </div>
+    <h2>z-index</h2>
+    <div class="three">
+      <p>가장 위로 올라온다.</p>
+    </div>
+    <div class="four">
+      <p>밑으로 내려간다.</p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>03장-7.4 link 다루기</title>
+    <style>
+      /* 
+			a : link { } : 한번도 방문한적 없는 상태(디폴트 값).
+			a : visited { } : 한번이라도 방문한 상태.
+			a : active { } : 링크를 마우스로 누른 상태
+			a : hover { } : 링크위에 마우스를 올려놓은 상태 
+			*/
+      a:link {
+        color: red;
+        text-decoration: none;
+        background-color: yellow;
+      }
+      a:visited {
+        color: red;
+        background-color: green;
+      }
+      a:hover {
+        background-color: white;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="https://www.google.com/">google</a>
+  </body>
+</html>

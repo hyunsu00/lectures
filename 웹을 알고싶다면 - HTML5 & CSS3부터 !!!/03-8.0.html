@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>03장-8 위치(Position) 다루기</title>
+    <style>
+      /* 
+			위치(position) 지정 속성의 종류는 크게 4가지가 있다
+				static : 디폴트 값이며 코드 흐름에서 자신의 위치.
+				relative : 원래 위치에서 상대적인 위치 지정.
+				absolute : 자신을 감싸고 있는 Tag에서 상대적인 위치 지정.
+				fixed : 전체 보여지는 화면에서 고정된 위치. 
+			*/
+      /* 
+			static
+				positon의 디폴트 값 이다.
+				top, bottom, left, right 속성에 영향을 받지 않는다.
+				특별한 방식으로 위치시키지 않고 페이지의 정상적인 흐름에 따라 위치가 결정된다. 
+			*/
+      .static {
+        width: 300px;
+        position: static;
+        border: 2px solid red;
+      }
+      /* 
+			relative
+				원래 위치에 대해 상대적으로 위치시킨다
+				top, bottom, left, right 속성을 지정하여 원래 위치로부터 변경한다.
+				다른 요소들에게 영향을 미치지 않는다. 
+			*/
+      .relative {
+        width: 300px;
+        position: relative;
+        left: 100px;
+        border: 2px solid red;
+      }
+      .relative2 {
+        width: 400px;
+        height: 200px;
+        position: relative;
+        left: 100px;
+        border: 3px solid red;
+      }
+      /* 
+			absolute
+				바로 자신을 감싸는 Tag에 대해 상대적으로 위치를 설정한다.
+				자신을 감싸는 Tag가 없을 경우 <body> Tag를 기준으로 한다.
+				단 , 자신을 감싸는 Tag가 static 위치 속성을 가지면 해당하지 않는다 
+			*/
+      .absolute {
+        width: 200px;
+        height: 100px;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        border: 3px solid black;
+      }
+      .static2 {
+        width: 400px;
+        height: 200px;
+        position: static;
+        left: 100px;
+        border: 3px solid red;
+      }
+      /* 자신을 감싸는 Tag가 static 속성을 가지고 있어 <body> Tag를 기준으로 한다. */
+      .absolute2 {
+        width: 200px;
+        height: 100px;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        border: 3px solid black;
+      }
+      /* 
+			fixed
+				페이지가 스크롤되더라도 항상 같은 영역에 머무른다.
+				top, bottom, left, right 속성을 이용하여 위치 설정 
+			*/
+      .fixed {
+        width: 400px;
+        height: 200px;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        border: 3px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>1. position: static</h2>
+    <div class="static">
+      <p>1.1. static으로 위치지정</p>
+    </div>
+    <h2>2. position: relative</h2>
+    <div class="relative">
+      <p>2.1. relative으로 위치지정</p>
+    </div>
+    <h2>3. position: absolute</h2>
+    <div class="relative2">
+      <p>3.1.relative으로 위치지정</p>
+      <div class="absolute">
+        <p>3.2. absolute으로 위치지정</p>
+      </div>
+    </div>
+    <h2>4. position: relative</h2>
+    <div class="static2">
+      <p>4.1. static으로 위치지정</p>
+      <div class="absolute2">
+        <p>4.2. absolute으로 위치지정</p>
+      </div>
+    </div>
+    <h2>5. position: fixed</h2>
+    <div class="fixed">
+      <p>5.1. fixed으로 위치지정</p>
+    </div>
+  </body>
+</html>

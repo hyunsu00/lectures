@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>03장-8.2 레이아웃 너비와 최대 너비</title>
+    <style>
+      /* 
+			width : width 속성은 브라우저 너비까지 커지는 것을 막을 수 있다.
+			max-width : 최대 너비를 지정하고, 해당 너비 이하는 브라우저 너비에 맞춘다.
+			auto : width와 함께 사용시, 해당 요소를 수평적으로 중앙에 위치시킨다. 
+			*/
+      /* 
+			브라우저의 너비를 크게 키우거나 줄였을 때, 
+			width는 너비가 딱 정해져 있고 
+			max-width는 500px 보다 작을때는 브라우저 너비에 맞춰지고 
+			500px 보다 클때는 너비가 500px에 맞춰진다. 
+			*/
+      .one {
+        width: 500px;
+        margin: auto;
+        border: 1px solid black;
+      }
+      .two {
+        max-width: 1000px;
+        margin: auto;
+        border: 1px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="one">width가 500px이다</div>
+    <br /><br />
+    <div class="two">max-width가 1000px이다</div>
+  </body>
+</html>
