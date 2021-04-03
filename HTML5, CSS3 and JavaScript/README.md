@@ -1,9 +1,6 @@
 # [HTML5 등장 배경 및 표준화 현황](http://fromyou.tistory.com/411)<br />
 
 ## [1. HTM5의 구조 및 기본 지식 익히기](http://fromyou.tistory.com/412)<br />
-
----
-
 [1.2 웹 브라우저(Browser)의 기능과 한계](http://fromyou.tistory.com/413)<br />
 [1.3 HTM5의 구조(Structure](http://fromyou.tistory.com/414)<br />
 [1.3.1 HTML5의 요소(Element) 작성 방법](http://fromyou.tistory.com/415)<br />
@@ -83,9 +80,6 @@
 [11.2 class, id, style 속성](http://fromyou.tistory.com/479)<br />
 
 ## [2장 CSS3](http://fromyou.tistory.com/480)<br />
-
----
-
 [1. CSS의 구조와 선택자(selector), 1.1 요소 이름을 이용한 선택자(Selector) 구성과 규칙(Rule) 만들기](http://fromyou.tistory.com/481)<br />
 [1.2 id를 이용한 선택자(Selector) 구성과 규칙(Rule) 만들기](http://fromyou.tistory.com/482)<br />
 [1.3 class를 이용한 선택자(Selector) 구성과 규칙(Rule) 만들기](http://fromyou.tistory.com/483)<br />
@@ -136,9 +130,6 @@
 [8.2 내부 여백인 padding, 경계(border), 그리고 외부여백(margin)](http://fromyou.tistory.com/523)<br />
 
 ## [3장 JavaScript](http://fromyou.tistory.com/524)<br />
-
----
-
 [1. JavaScript의 데이터 타입, 변수, 1.1 데이터 타입(Data Type)](http://fromyou.tistory.com/525)<br />
 [1.2 변수(Variable)](http://fromyou.tistory.com/526)<br />
 
@@ -179,9 +170,6 @@
 [8.3 getElementById(), getElementByTagName() 메서드를 이용한 접근](http://fromyou.tistory.com/555)<br />
 
 ## 4장 Canvas
-
----
-
 [1. Canvas를 사용하기 위한 기본적인 준비작업](http://fromyou.tistory.com/556)<br />
 [1.3 색상(color)과 스타일(style)](http://fromyou.tistory.com/557)<br />
 [2. 사각형(Rectangle) 그리기](http://fromyou.tistory.com/558)<br />
@@ -207,12 +195,7 @@
 
 ## [6장 Drag and Drop](http://fromyou.tistory.com/574)<br />
 
----
-
 ## 7장 Web Storage
-
----
-
 [1. localStorage](http://fromyou.tistory.com/575)<br />
 [2. sessionStorage](http://fromyou.tistory.com/576)<br />
 [Box Model을 이용한 게시판 형태 만들기](http://fromyou.tistory.com/577)<br />
