@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3. 흐름 제어(Flow Control)</title>
+    <script>
+      var student_name = "김덕훈";
+      if (student_name == "김덕훈") document.write("학생이름은 " + student_name);
+      document.write("<br />");
+
+      var student_name = "김덕훈";
+      if (student_name == "노주형") document.write("학생이름은 " + student_name);
+      else document.write("김덕훈이 아닙니다.");
+      document.write("<br />");
+
+      var student_name = prompt("이름을 입력해주세요.");
+      if (student_name == "김덕훈") document.write("학생이름은 " + student_name);
+      else if (student_name == "노주형") document.write("학생이름은 노주형입니다.");
+      else document.write("누군지 모릅니다.");
+    </script>
+  </head>
+  <body></body>
+</html>

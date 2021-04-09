@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2.8 변환(Conversion)</title>
+    <script>
+      function toString_() {
+        var numberData = 15;
+        var booleanData = true;
+        var ArrayData = new Array("유럽 항공권", "노트북");
+        document.write("numberData 변환 : " + numberData.toString() + "<br />");
+        document.write("numberData  2진수로 변환 : " + numberData.toString(2) + "<br />");
+        document.write("numberData 8진수로 변환 : " + numberData.toString(8) + "<br />");
+        document.write("numberData 16진수로 변환 : " + numberData.toString(16) + "<br />");
+        document.write("booleanData 변환 : " + booleanData.toString() + "<br />");
+        document.write("ArrayData 변환 : " + ArrayData.toString() + "<br />");
+      }
+      function parseInt_parseFloat() {
+        var intString = "100점";
+        var floatString = "42.195km";
+
+        document.write("<br />");
+        document.write("변환된 데이터 : " + parseInt(floatString) + "<br />");
+        document.write("변환된 데이터 : " + parseFloat(floatString));
+
+        intString = "수학 100점";
+        floatString = "마라톤 42.195km";
+        document.write("<br />");
+        document.write("변환된 데이터 : " + parseInt(floatString) + "<br />");
+        document.write("변환된 데이터 : " + parseFloat(floatString));
+      }
+
+      toString_();
+      parseInt_parseFloat();
+    </script>
+  </head>
+  <body></body>
+</html>

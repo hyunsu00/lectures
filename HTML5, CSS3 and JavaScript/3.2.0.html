@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2. 연산자(Operators)와 변환(Convert)</title>
+    <script>
+      function Arithmetric_Operator() {
+        var addValue = 3 + 7;
+        var number1 = 12;
+        var number2 = 3;
+        var subValue = number1 - number2;
+        var multiValue = number1 * number2;
+        var divValue = number1 / number2;
+        var modValue = number1 % number2;
+
+        document.write("더하기 연산 결과 : " + addValue);
+        document.write("<br />빼기 연산 결과 : " + subValue);
+        document.write("<br />곱하기 연산 결과 : " + multiValue);
+        document.write("<br />나누기 연산 결과 : " + divValue);
+        document.write("<br />나머지 연산 결과 : " + modValue);
+      }
+      function Assignment_Operator() {
+        var assignValue = 2;
+        var number = 10;
+        var modNumber2 = 15;
+
+        number += 2;
+        var addAssignValue = number;
+
+        number -= 2;
+        var subAssignValue = number;
+
+        number *= 2;
+        var multiAssignValue = number;
+
+        number /= 2;
+        var divAssignValue = number;
+
+        modNumber2 %= 2;
+        var modAssignValue = modNumber2;
+
+        document.write("<br /><br />");
+        document.write("할당 연산 결과 : " + assignValue);
+        document.write("<br />더하기 할당 연산 결과 : " + addAssignValue);
+        document.write("<br />빼기 할당 연산 결과 : " + subAssignValue);
+        document.write("<br />곱하기 할당 연산 결과 : " + multiAssignValue);
+        document.write("<br />나누기 할당 연산 결과 : " + divAssignValue);
+        document.write("<br />나머지 할당 연산 결과 : " + modAssignValue);
+      }
+      function Concatenation_Operator() {
+        var strData1 = "오늘은 ";
+        var strData2 = "일찍 퇴근";
+        var strResult = strData1 + strData2;
+        var strHope = "소박한 바램 : ";
+        strHope += "여가 생활을 하고 싶다.";
+        document.write("<br /><br />");
+        document.write("연속 연산 결과 : " + strResult);
+        document.write("<br />기존 데이터에 대한 연속 연산 : " + strHope);
+      }
+      function Comparison_Operator() {
+        var strName1 = "Korea";
+        var strName2 = "korea";
+
+        //숫자 비교를 위한 변수 선언 및 초기화  --②
+        var number1 = 3;
+        var number2 = 3.14;
+
+        //"=="와 "===" 연산자 비교를 위한 변수 선언 및 초기화 --③
+        var variable1 = 33;
+        var variable2 = "33";
+
+        document.write("<br /><br />");
+        document.write("문자열이 같은가? : " + (strName1 == strName2));
+        document.write("<br/>문자열이 다른가? : " + (strName1 != strName2));
+        document.write("<br/>number1이 number2보다 큰가? : " + (number1 > number2));
+        document.write("<br/>number1이 number2보다 크거나 같은가? : " + (number1 >= number2));
+        document.write("<br/>variable1,variable2가 같은가? : " + (variable1 == variable2));
+        document.write("<br/>variable1,variable2가 같은가? : " + (variable1 === variable2));
+      }
+      function Logical_Operator() {
+        //문자열 비교를 위한 변수 선언 및 초기화  --①
+        var strName1 = "Korea";
+        var strName2 = "korea";
+        var stringCompare = strName1 == strName2;
+
+        //숫자 비교를 위한 변수 선언 및 초기화  --②
+        var number1 = 3;
+        var number2 = 3.14;
+        var numberComp = number1 < number2;
+
+        //AND, OR, NOT 연산을 위한 변수 선언 및 초기화 --③
+        var ANDOperation = stringCompare && numberComp;
+        var OROperation = stringCompare || numberComp;
+        var NOTOperation = !stringCompare;
+
+        document.write("<br /><br />");
+        document.write("문자열이 같은가? : " + stringCompare);
+        document.write("<br/>number1이 number2보다 작은가? : " + numberComp);
+
+        document.write("<br/>AND 연산: " + ANDOperation);
+        document.write("<br/>OR 연산 : " + OROperation);
+        document.write("<br/>NOT 연산 : " + NOTOperation);
+      }
+      function Conditional_Operator() {
+        var number1 = 3;
+        var number2 = 3.14;
+        var p1 = "3이 3.14보다 작다.";
+        var p2 = "3이 3.14보다 크다.";
+        var Result = number1 < number2 ? p1 : p2;
+
+        document.write("<br /><br />");
+        document.write("Conditional Operator 결과 : " + Result);
+      }
+      Arithmetric_Operator();
+      Assignment_Operator();
+      Concatenation_Operator();
+      Comparison_Operator();
+      Logical_Operator();
+      Conditional_Operator();
+    </script>
+  </head>
+  <body></body>
+</html>

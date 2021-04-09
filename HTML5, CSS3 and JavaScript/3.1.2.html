@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1.2 변수(Variable)</title>
+    <script>
+      // 변수의 선언과 값 설정
+      // var inputData = prompt("이름을 입력하세요.", "");
+      // if (inputData != null) {
+      //   document.write("입력한 데이터 : ", inputData);
+      // } else {
+      //   document.write("입력한 데이터 : ", "null");
+      // }
+
+      // 변수의 적용 범위
+      var Message = "안녕하세요.";
+      function greeting() {
+        var inMessage = "여러분";
+        alert("greeting 함수 내에서 " + Message + "\t" + inMessage);
+      }
+      function hello() {
+        alert("hello 함수 내에서 " + Message + "\t");
+      }
+    </script>
+  </head>
+  <body>
+    <button type="button" onclick="greeting()">내부 함수에서</button>
+    <button type="button" , onclick="hello()">외부 함수에서</button>
+  </body>
+</html>
