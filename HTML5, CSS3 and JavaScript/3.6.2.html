@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>3.6.2 생성된 배열(array)에 저장된 데이터 접근 및 출력</title>
+	<script type="text/javascript">
+		/*
+		배열 생성
+		var 생성할배열이름 = new Array(배열의 크기);
+		var 생성할배열이름 = new Array(“항목1”, “항목2”, …);
+		var 생성할배열이름 = [항목1, 항목2, … ];
+
+		배열 접근
+		생성된배열이름[인덱스번호] = 아이템(요소)값;
+		*/
+		var shoppingItems = new Array(3);
+		shoppingItems[0] = "페레가모 안경";
+		shoppingItems[1] = "노트북";
+		shoppingItems[2] = "DSLR";
+		for(var idx=0; idx < 5; idx++) {
+			document.write("shoppingItems[" + idx + "]의 데이터 : " + shoppingItems[idx] + "<br />");
+		}
+		for (var item in shoppingItems) {
+			document.write("shoppingItems의 데이터 : " + shoppingItems[item] + "<br />");
+		}
+		shoppingItems.forEach(
+			function(value, index, array) {
+				document.write("요소번호(index): " + index + "&nbsp;&nbsp;&nbsp;");
+      	document.write("요소값(value): " + value + "&nbsp;&nbsp;&nbsp;");
+      	document.write("<br />");
+			}
+		)
+	</script>
+</head>
+<body></body>
+</html>

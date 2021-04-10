@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>3.6.6 해쉬 테이블(HashTable)</title>
+	<script type="text/javascript">  
+		/*
+			//Object를 이용할 경우
+			var hash = new Object();
+			hash.속성1=속성값1;
+			hash.속성2=속성값2;
+			…
+			혹은 {} 을 이용하여 생성할 경우
+			var hash = {속성1:속성값1, 속성2:속성값2, … };
+		*/
+		{
+			var hash_book = new Object();
+			hash_book.title="국화와 칼";
+			hash_book.author="루스 베네딕트";
+			hash_book.pages=253;
+		
+			for(key in hash_book) {
+				document.write("key: "+ key +" value:" + hash_book[key] + "<br />"); 
+			}
+		}
+		/*
+			//Array를 이용할 경우
+			var hash = new Array();
+			hash[“key로 사용될 속성1”]=속성값1;
+			hash[“key로 사용될 속성2”]=속성값2;
+			…
+		*/
+		{
+			var shoppingItems = new Array();
+			shoppingItems["안경"] = "페레가모 안경";
+			shoppingItems["노트북"] = "LG 노트북";
+			shoppingItems["스마트폰"] = "아이폰";
+			shoppingItems["항공권"] = "유럽왕복항공권";
+			shoppingItems["책"] = "마이클 헤머의 리엔지니어링";
+		
+			for(key in shoppingItems)
+				document.write("key: "+key+" value:"+shoppingItems[key]+"<br />"); 
+		}
+  </script>
+</head>
+<body></body>
+</html>

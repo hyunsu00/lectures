@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>3.6.4.2 pop(), shift() 메서드를 이용한 데이터 삭제</title>
+	<script type="text/javascript">
+		/*
+		pop()
+			배열의 마지막 요소를 제거하는데 사용하는 메서드로 삭제되는 요소를 반환
+		shift()
+			배열의 첫 번째 요소를 제거하는데 사용하는 메서드로 삭제되는 요소를 반환
+		*/
+		var shoppingItems = ["페레가모 안경", "노트북", "DSLR"];
+		document.write(shoppingItems.pop()+"<br />");
+		document.write(shoppingItems+"<br />");
+
+		document.write("<hr>");
+
+		var books = new Array("부의 미래", "Drive", "영원한 제국");
+		document.write(books.shift()+"<br />");
+		document.write(books+"<br />");
+	</script>
+</head>
+<body></body>
+</html>

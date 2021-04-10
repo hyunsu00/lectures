@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>3.6.4.4 join(), toString() 메서드를 이용한 배열을 문자열로 바꾸기</title>
+	<script type="text/javascript">  
+		/*
+		join(separator)
+			배열에 저장되어 있는 요소들을 문자열의 형태로 나열
+
+		toString()
+			데이터를 문자열의 형태로 나열
+		*/
+    var train = ["KTX", "새마을호", "통일호"];
+    document.write(train.join() + "<br />");
+    document.write(train.join("^") + "<br />");
+    document.write(train.join("_"));
+    document.write("<hr>");
+
+    var cities = ["서울", "부산", "인천"];
+    document.write(cities.toString());
+  </script>
+</head>
+<body></body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>3.6.5 이차원 배열</title>
+	<script>
+		/*
+			//new 키워드를 이용한 방법
+			var twoDArray= new Array(행의 수);
+			twoDArray[행번호] = new Array(열의 수);
+			//[] 기호를 이용한 방법
+			var twoDSArray= [ [요소1, 요소2, …], [요소1, 요소2, …], …]
+		*/
+		function displayItems(inArray) {
+      for(var ridx = 0; ridx < inArray.length; ridx++){
+        for(var cidx = 0; cidx < inArray[0].length; cidx++) {
+					document.write(inArray[ridx][cidx]+"\t");
+				}
+        document.write("<br />");     
+      }
+    }
+		function displayItemsToTable(inArray){
+      for(var ridx=0;ridx<inArray.length; ridx++){
+        if(ridx == 0) {
+          document.write("<table border>");
+          document.write("<tr>");
+          for(var cidx=0; cidx<inArray[0].length; cidx++)  
+            document.write("<th>"+inArray[ridx][cidx]+"</th>"); 
+          document.write("</tr>");
+        } else {
+          document.write("<tr>");
+          for(var cidx=0; cidx<inArray[0].length; cidx++)
+            document.write("<td>"+inArray[ridx][cidx]+"</td>"); 
+          document.write("</tr>");
+        }   
+      }
+      document.write("</table>"); 
+    }
+		{
+			var twoDArray = new Array(3);
+			twoDArray[0] = new Array(4);
+			twoDArray[0][0]= "사원번호";
+			twoDArray[0][1]= "이름";
+			twoDArray[0][2]= "직급";
+			twoDArray[0][3]= "전화번호";
+			
+			twoDArray[1] = new Array(4);
+			twoDArray[1][0]= "S000001";
+			twoDArray[1][1]= "조민기";
+			twoDArray[1][2]= "대리";
+			twoDArray[1][3]= "010-775-7845";
+
+			twoDArray[2] = new Array(4);
+			twoDArray[2][0]= "M000002";
+			twoDArray[2][1]= "이학동";
+			twoDArray[2][2]= "팀장";
+			twoDArray[2][3]= "010-887-9999";
+
+			var twoDSArray = [ 
+				["사원이름", "이름", "직급", "전화번호"],
+        ["S000001", "조민기", "대리", "010-775-7845"],
+        ["M000002", "이학동", "팀장", "010-887-9999"]
+			];
+
+			displayItems(twoDArray);
+			displayItemsToTable(twoDArray);
+			document.write("<br />");
+			displayItems(twoDSArray);
+			displayItemsToTable(twoDSArray);
+		}
+	</script>
+</head>
+<body></body>
+</html>

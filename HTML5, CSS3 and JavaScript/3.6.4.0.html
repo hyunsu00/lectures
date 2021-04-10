@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>3.6.4.0 배열(Array)의 주요 메서드(Method)</title>
+	<script type="text/javascript">
+		/*
+		concat(x, [y , z, …])
+			기존의 배열(array)에 x를 추가하거나, x, [y, z, …]를 추가하여 그 결과를 반환
+			기존의 존재하던 배열을 변경하지 않는다.
+
+		push(x, [y, z, …])
+			기존의 배열(array)의 끝에 x를 추가하거나 x, [y, z, …]를 추가한 후 그 결과로 
+			새롭게 추가된 아이템을 포함한 배열의 길이(length)를 숫자형태로 반환
+
+		unshift()
+			기존의 배열(array)의 시작부분에 x를 추가하거나 x, [y, z, …]를 추가한 후 
+			그 결과로 새롭게 추가된 아이템을 포함한 배열의 길이(length)를 숫자형태로 반환
+		*/
+		//배열에 저장된 데이터 표시
+		function ShowItem(inarr) {
+			for(var idx=0; idx<inarr.length; idx++)
+				document.write("저장되어 있는 요소값 : " + inarr[idx]+"<br />");
+		}
+
+		document.write("concat 사용법<br />");
+		// concat 사용법
+		{
+			var shoppinItems = new Array("페레가모 안경", "노트북", "DSLR");
+			var addItems = new Array("아이패드", "윈도우폰");
+			var result = shoppinItems.concat(addItems);
+
+			ShowItem(result);
+			document.write("<hr>");
+			ShowItem(shoppinItems);
+		}
+		// push 사용법
+		document.write("<br /><br />push 사용법<br />");
+		{
+			var shoppinItems = ["페레가모 안경", "노트북", "DSLR"];
+			ShowItem(shoppinItems);
+			document.write("<hr>");
+			document.write(shoppinItems.push("아이패드", "윈도우폰")+"<br />");
+			ShowItem(shoppinItems);
+		}
+	</script>
+</head>
+<body></body>
+</html>
