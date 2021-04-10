@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3.5.0 객체(Object)</title>
+    <script>
+      /*
+			[객체 생성]
+			var 생성할객체이름 = new Object();
+			*/
+      /*
+			[객체 속성 추가]
+			객체이름.속성이름 = 속성값;
+			*/
+      /*
+			[객체 매서드 추가]
+			객체이름.메서드이름 = 함수A;
+			…
+			function 함수A() {
+				처리할 코드들;
+			}
+			객체이름.메서드이름 = function 함수A{
+				처리할 코드들;
+			}
+			*/
+      var student = new Object();
+      student.student_number = "20090917";
+      student.name = "홍길동";
+      student.phone_number = "010-9292-5353";
+      student.display = object_display;
+      function object_display() {
+        document.write("student 객체의 학번 : " + student.student_number + " 이름 : " + student.name + " 전화번호 : " + student.phone_number);
+      }
+			student.display2 = function() {
+				document.write("<br />student.display2 = function(){}");
+			}
+      document.write("student 객체의 학번 : " + student.student_number + " 이름 : " + student.name + " 전화번호 : " + student.phone_number);
+      document.write("<br />");
+      student.display();
+			student.display2();
+    </script>
+  </head>
+  <body></body>
+</html>

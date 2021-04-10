@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3.4 switch … case 문</title>
+    <script>
+      {
+        var yourName = "김소월";
+        switch (yourName) {
+          case "김소월":
+            document.write("김소월님! 안녕하세요.");
+            break;
+          case "윤동주":
+            document.write("윤동주님! 시가 너무 아름답습니다.");
+            break;
+          case "신석정":
+            document.write("신석정님의 시는 너무 서정적이에요.");
+            break;
+          default:
+            document.write("만나서 반가워요!");
+        }
+      }
+      document.write("<br />");
+      {
+        var startValue = 1;
+        for (startValue; startValue <= 10; startValue++) document.write(startValue);
+      }
+      document.write("<br />");
+      {
+        var students = { name: "김덕훈", student_number: "20080912", age: 24 };
+        for (info in students) {
+          document.write(students[info] + " ");
+        }
+      }
+      document.write("<br />");
+      {
+        var yourDate = new Date(); //Date 객체 생성
+        var curr_date = yourDate.getDate(); //현재 날짜
+        var curr_month = yourDate.getMonth(); //현재 월(month)
+        curr_month++; //내부적으로 월이 0부터 시작하므로
+        var curr_year = yourDate.getFullYear(); //현재 년도
+        var count = 1;
+
+        while (count < 6) {
+          document.write(curr_month + "/" + curr_date + "/" + curr_year + "<br />");
+          count++;
+        }
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

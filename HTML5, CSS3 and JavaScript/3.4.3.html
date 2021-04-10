@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3.4.3 다른 함수로부터 함수 호출</title>
+    <script>
+      function greeting(inyourName) {
+        var inValue = inyourName;
+        alert(inValue + "님 " + "안녕하세요. 좋은 아침입니다.");
+      }
+      function whattimeNow(yourName) {
+        greeting(yourName);
+        var now = new Date();
+        var current_Date = now.toLocaleString();
+        return current_Date;
+      }
+
+      var yourName = "체르니";
+      var returnTime = whattimeNow(yourName);
+      document.write("현재 날짜는 " + returnTime + "입니다.");
+    </script>
+  </head>
+  <body></body>
+</html>

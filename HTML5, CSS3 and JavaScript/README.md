@@ -146,9 +146,9 @@
 [4.3 다른 함수로부터 함수 호출](http://fromyou.tistory.com/532)
 
 [5. 객체(Object), 5.1 객체(object)의 생성, 5.1.1 Object() 생성자를 이용하여 객체 생성](http://fromyou.tistory.com/533)  
-[5.1.2 생성자 함수(constructor function)를 잉요하여 객체 정의하고 생성하기](http://fromyou.tistory.com/534)  
+[5.1.2 생성자 함수(constructor function)를 이용하여 객체 정의하고 생성하기](http://fromyou.tistory.com/534)  
 [5.1.3 object 표기 방법인 {}을 이용한 객체 생성](http://fromyou.tistory.com/535)  
-[대괄호(square bracket)를 이용한 속성(Property) 접근 및 디버깅](http://fromyou.tistory.com/536)
+[5.2 대괄호(square bracket)를 이용한 속성(Property) 접근 및 디버깅](http://fromyou.tistory.com/536)
 
 [6. 배열(Array), 6.1 배열(array)의 생성](http://fromyou.tistory.com/537)  
 [6.2 생성된 배열(array)에 저장된 데이터 접근 및 출력](http://fromyou.tistory.com/538)  

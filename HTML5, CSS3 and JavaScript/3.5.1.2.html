@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3.5.1.2 생성자 함수(constructor function)를 이용하여 객체 정의하고 생성하기</title>
+    <script>
+      /*
+			생성자 함수(constructor function)를 이용하여 객체 정의하고 생성하기
+			function 정의할객체이름(입력파라미터1, 입력파라미터2, …){
+				this.속성1= 속성값1;
+				this.속성2 = 속성값2;
+				…;
+				this.메서드1 = 호출할메서드이름1;
+				this.메서드2 = 호출할메서드이름2;
+				…
+			}
+
+			function 호출할메서드이름1() {
+				처리할 코드들;
+			}
+
+			function 호출할메서드이름2() {
+				처리할 코드들;
+			}
+			*/
+      /*
+			객체 생성
+			var 생성할객체이름 = new 정의한객체이름;
+			var 생성할객체이름 = new 정의한객체이름(입력파라미터1, 입력파라미터2, …);
+			*/
+      //cities 객체 정의
+      function cities(innationName, incityname) {
+        this.nationName = innationName;
+        this.cityName = incityname;
+
+        this.display = showCities; //display 메서드에 호출할 함수 명시
+      }
+      //display에 의해 호출될 함수 정의
+      function showCities() {
+        document.write("나라이름 : " + this.nationName);
+        document.write("<br />도시이름 : " + this.cityName);
+      }
+    </script>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var yourCities = new cities(); //cities형 yourCities 객체 생성
+      yourCities.display(); //disply() 메서드 호출
+      document.write("<hr>");
+
+      var ourCities = new cities("대한민국", "서울"); //cities형 ourCities 객체 생성
+      ourCities.display(); //disply() 메서드 호출
+    </script>
+  </body>
+</html>

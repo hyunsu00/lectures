@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>3.5.1.3 object 표기방법인 {}을 이용한 객체 생성</title>
+	<script type="text/javascript">
+		/*
+			object 표기방법인 {}을 이용한 객체 생성
+			var 생성할객체이름 = {속성1:속성1값, 속성2:속성2값, …};
+			var 생성할객체이름 = {
+				속성1: 속성1값,
+				속성2: 속성2값,
+				…,
+				메서드1: function() {
+					처리할 코드들;
+				}
+				메서드2: function() {
+					처리할 코드들;
+				}
+			}
+		*/
+		var book = { title: "부의 미래", author: "앨빈 토플러" };
+		document.write("book 제목 : " + book.title + " 저자 : " + book.author);
+
+		var Amusement_park = {
+			name: "꽃밭",
+			rel_pic: "flower2.jpg",
+			display: function () {
+				document.write("<br />예전에 가본 놀이공원의 꽃밭에서");
+			},
+      displaywith: function (inperson) {
+				document.write("<br />" + inperson + "과 함께 꽃밭에서");
+			}
+		}
+	</script>
+</head>
+
+<body>
+	<script type="text/javascript">
+		document.write("<br />");
+		document.write("제목 : " + Amusement_park.name);
+		document.write("<br/><img src='" + Amusement_park.rel_pic + "'>");
+		Amusement_park.display();
+
+		document.write("<br /><br />");
+		Amusement_park.name="에버랜드에서";
+		document.write("제목 : " + Amusement_park.name);
+		document.write("<br/><img src='" + Amusement_park.rel_pic + "'>");
+		Amusement_park.displaywith("친구들");
+	</script>
+</body>
+
+</html>

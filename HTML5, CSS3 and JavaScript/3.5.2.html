@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>3.5.2 대괄호(square bracket)를 이용한 속성(Property) 접근 및 디버깅</title>
+	<script type="text/javascript">
+		/*
+			대괄호(square bracket)를 이용한 속성(Property) 접근 및 디버깅
+			//도트(.)를 이용할 경우
+			var d_title =book.title;
+			var d_author=book.author;
+			//대괄호(square bracket)를 사용할 경우
+			var s_title=book[“title”]
+			var s_author=book[“author”];
+		*/
+		var book = {
+			title : "부의 미래",
+			author : "앨빈 토플러"
+		}
+		document.write("book 제목 : "+ book["title"]+ " 저자 : " + book["author"]);
+		document.write("<br />");
+
+		var student = new Object();
+		student["student_number"] = "20090917";
+		student["name"] = "홍길동";
+    student["phone_number"] = "010-9292-5353";
+		for (var data in student) {
+			document.write(student[data] + "\t");
+		}
+	</script>
+</head>
+	<body>
+		
+	</body>
+</html>
