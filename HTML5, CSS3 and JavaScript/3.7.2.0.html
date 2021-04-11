@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>3.7.2 Event Method를 이용한 이벤트 처리</title>
+	<style type="text/css">
+    div.color {
+      border-width:3px;
+      border-style:solid;
+      border-color:#ff9900;
+    }
+  </style>
+	<script type="text/javascript">
+		window.onload = function() {
+			/*
+			addEventListener(eventType, handler, capture)
+				HTML DOM 요소에 특정 이벤트와 이에 대한 이벤트 처리를 위한 함수를 연결할 수 있도록 지원하는 메서드
+				
+			removeEventListener(eventType, handler, capture)
+				HTML DOM 요소에 연결된 특정 이벤트와 이에 대한 이벤트 처리를 위한 함수를 삭제
+			*/
+			{
+				let vimg_1 = document.getElementById("flowerid_1");	
+				vimg_1.addEventListener("dblclick", dblclkHandler, false);
+				let count = 1;
+
+				function dblclkHandler(event) {
+					if(count != 1) {     
+						this.removeEventListener("dblclick", dblclkHandler, false);
+						alert("dblclick 이벤트가 삭제되었습니다.");
+					} else {
+						alert(this.nodeName+ "요소의 flower2.jpg 이미지를 더블클릭하여"+
+						event.type +"이벤트 발생");
+					}
+					count++;
+				}
+			}
+			//
+			/*
+			Event capturing
+				밖에서 안으로 접근하는 형태로 방금 전 가정을 생각해보면 먼저 div 요소의 click 이벤트가 발생하고 
+				img 요소의 click 이벤트 발생하는 순서로 동작합니다.
+
+			Event bubbling
+				안으로 밖으로 접근하는 형태로 Event capturing 접근방법과 반대로 먼저 img 요소의 click 이벤트 발생하고 
+				div 요소의 click 이벤트가 발생하는 순서로 동작합니다.
+			*/
+			{
+				let vdiv_1 = document.getElementById("outer_div_1");
+				let vdiv_2 = document.getElementById("outer_div_2");
+				vdiv_1.addEventListener("click", divclkHandler, false);  
+				vdiv_2.addEventListener("click", divclkHandler, true);  
+
+				let vimg_2 = document.getElementById("flowerid_2");
+				let vimg_3 = document.getElementById("flowerid_3");
+				vimg_2.addEventListener("click", imgclkHandler, false);
+				vimg_3.addEventListener("click", imgclkHandler, true);
+
+				function divclkHandler(event) {
+					alert(this.nodeName+ "요소를 클릭하여"+ event.type +"이벤트 발생");
+				}
+
+				function imgclkHandler(event) {
+					alert(this.nodeName + "요소의 flower2.jpg 이미지를 클릭하여" +
+					event.type + "이벤트 발생");
+				}   
+			}
+		}
+  </script>
+</head>
+<body>
+	<p>이미지 위에서 마우스 더블클릭(dblclick)</p>
+  <img id="flowerid_1" src="flower2.jpg" width="100" height="70">
+
+	<p>동일한 이벤트 타입 처리 - Event bubbling</p>
+	<div id="outer_div_1" class="color">
+    <img id="flowerid_2" src="flower2.jpg" width="100" height="70">
+  </div>
+
+	<p>동일한 이벤트 타입 처리 - Event capturing</p>
+	<div id="outer_div_2" class="color">
+    <img id="flowerid_3" src="flower2.jpg" width="100" height="70">
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>3.8.2.1 insertBefore(), appendChild() 메서드를 이용한 노드 추가</title>
+</head>
+<body>
+	<ul id="oulFruits">
+    <li id="oliApple">사과</li>
+    <li id="olistrawberry">딸기</li>
+    <li id="oliGrape">포도</li>
+  </ul>
+	<!-- DOM 트리가 만들어 진후 처리해야함 -->
+	<script type="text/javascript">
+		/*
+		insertBefore() 메서드는 아래 형식에서 보는 것처럼 입력 파라미터로 
+		newNode, childNode 모두 정의될 경우는 childNode 앞에 newNode 추가합니다만 
+		입력 파라미터로 childNode가 입력되지 않을 경우 맨 마지막 자식 노드 다음에 newNode가 추가됩니다.
+			
+			insertBefore(newNode [, childNode])
+		
+		appendChild() 메서드는 기존 자식 노드의 다음에 새로운 newNode를 추가합니다.
+
+			appendChild(newNode)
+		*/
+    let newNode = document.createElement("li");
+    newNode.innerText="수박";
+		newNode.style.color = "green";
+    //newNode.textContent=”수박”;
+    let retul = document.getElementById("oulFruits");
+    retul.insertBefore(newNode, olistrawberry);
+
+		newNode = document.createElement("li");
+		newNode.innerText = "오렌지";
+		newNode.style.color = "yellow";
+		retul.appendChild(newNode);
+
+  </script>
+</body>
+</html>

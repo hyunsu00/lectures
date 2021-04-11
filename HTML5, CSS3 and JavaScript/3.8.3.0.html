@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>3.8.3.0 getElementById(), getElementsByTagName() 메서드를 이용한 접근</title>
+</head>
+<body id="body1">
+  <h5 id="h5_id">getElementById() 메서드 </h5>
+  <img id="img_id" src="flower2.jpg" />
+
+	<!-- DOM 트리가 만들어 진후 처리해야함 -->
+  <script type="text/javascript">
+		/*
+		getElementById() 메서드는 id 속성을 이용하여 해당 속성을 가진 노드에 접근하는데 사용할 수 있는 메서드이고 
+		getElementsByTagName() 메서드는 요소(Element) 이름을 이용하여 노드에 접근할 수 있도록 지원합니다.
+			var retElement = document.getElementById(id이름);
+			var retNodes = document.getElementsByTagName(Element이름);
+		*/
+    let retbody = document.getElementById("body1");
+    let reth5 = document.getElementById("h5_id");
+    let retimg = document.getElementById("img_id");
+
+    retbody.style.backgroundColor="yellow";
+    reth5.style.fontFamily="century gothic";
+    reth5.style.fontSize="20";
+    reth5.style.color="blue";
+    retimg.style.border="2px dotted darkgreen";
+
+		var retText = document.getElementById("h5_id").innerHTML;
+    document.write("<br />h5 요소의 Text : " + retText + "<br />");
+    reth5.innerHTML="innerHTML 속성에 의해 값이 변경되었습니다.";
+  </script>
+
+	<ul>
+		<li>사과</li>
+		<li>딸기</li>
+		<li>파인애플</li>
+	</ul>
+	<!-- DOM 트리가 만들어 진후 처리해야함 -->
+	<script type="text/javascript">
+		/*
+		getElementsByTagName()는 요소의 이름을 입력 파라미터를 입력하여 HTML 문서에서 요소 이름에 해당하는 
+		모든 노드들을 반환받는 메서드로 다음과 같은 형식을 이용합니다.
+			var retNodes = document.getElementsByTagName(Element이름);
+		*/
+		let retliNodes = document.getElementsByTagName("li");
+    document.write("모두 " + retliNodes.length + "개의 li 요소가 발견됨 <br />");
+    for(i=0; i< retliNodes.length; i++) {
+      document.write( retliNodes[i].nodeName+" : " + retliNodes[i].childNodes[0].nodeValue+"<br />");
+    }
+  </script>
+</body>
+</html>

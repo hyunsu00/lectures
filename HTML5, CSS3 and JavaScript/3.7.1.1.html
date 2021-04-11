@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>3.7.1.1 window와 관련된 이벤트 핸들러 속성</title>
+	<script type="text/javascript">
+		/*
+		이벤트 핸들러 속성	 설명
+		onload							페이지 로딩(Loading)이 끝나면 발생하는 load 이벤트 처리
+		onunload						페이지가 닫히거나 다시 세팅될 때 발생하는 unload 이벤트 처리
+		onresize						window의 크기가 변동되면 발생하는 resize 이벤트 처리
+		onfocus							해당 window에 초점(focus)이 갈 때 발생하는 focus 이벤트 처리
+		onblur							onfocus 이벤트 핸들러와 반대로 해당 window가 초점을 잃으면 발생하는 blur 이벤트 처리
+		*/
+		function pageLoad() {
+			console.log(`onload="pageLoad()" 웹페이지가 로드됨`);
+		}
+		function pageUnLoad() {
+			console.log(`onunload="pageUnLoad()" 웹페이지가 언로드됨`);
+		}
+    function resizeFunc() {
+      console.log(`onresize="resizeFunc()" 크기가 변경됨`);
+    }  
+    function focusFuc() {
+      console.log(`onfocus="focusFuc()" 해당 윈도우에 초점이 감`);
+    }
+    function blurFunc() {
+			console.log(`onblur="blurFunc()" 해당 윈도우에 초점이 사라짐`);
+    }     
+</script>
+</head>
+<body onload="pageLoad()" onunload="pageUnLoad()" onresize="resizeFunc()" onfocus="focusFuc()" onblur="blurFunc()">
+	<img src="flower2.jpg" /><br />
+  <a href="http://fromyou.tistory.com"> 제 블로그로 이동</a>
+</body>
+</html>

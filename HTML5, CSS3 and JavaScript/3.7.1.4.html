@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>3.7.1.4 폼(Form)과 관련된 이벤트 핸들러 속성</title>
+	<script type="text/javascript">
+		/*
+		이벤트 핸들러 속성	 설명
+		onblur							요소가 초점(focus)을 잃었을 때 발생하는 blur 이벤트 처리
+		onfocus							요소가 초점(focus)을 받았을 때 발생하는 focus 이벤트 처리
+		oncontextmenu				마우스 오른쪽 버튼을 클릭하면 발생하는 contextmenu 이벤트 처리
+		onchange						요소에 어떤 변화가 발생했을 때 발생하는 onchange 이벤트 처리
+		onselect						input 요소나 textarea 요소의 텍스트(text)가 선택되었을 때 발생하는 select 이벤트 처리
+		onsubmit						하나의 form이 제출(submit)될 때 발생하는 submit 이벤트 처리
+		*/
+    function contextmenuFunc() {
+      alert("이미지 다운로드가 허용되지 않습니다.");
+    }
+		function updated(element) {
+      var idx = element.selectedIndex;
+      var val = element.options[idx].value;
+      var content = element.options[idx].innerHTML;
+      alert("선택한 제품은 "+ val + "항목 " + content + "입니다.");
+    }
+		function submitData(element){
+      alert("제출된 이름 : "  + element.yourname.value);
+    }
+  </script>
+</head>
+<body>
+	<p>이미지 위에서 마우스 오른쪽 버튼 클릭</p>
+  <img oncontextmenu="contextmenuFunc(); return false" src="flower2.jpg" width="100" height="70">
+	<p>구매할 스마트폰 선택</p>
+  <select name="select" onchange="updated(this)">
+    <option value="1">아이폰</option>
+    <option value="2">안드로이드폰</option>
+    <option value="3">Mango폰</option>
+  </select>
+	<form>
+    <input type="text" value="노트북" onselect="alert('노트북 선택')">
+  </form>
+	<form name="ourform" onSubmit="submitData(this)">
+		<input type="text" name="yourname">
+		<input type="submit" VALUE="제출(submit)">
+ 	</form>
+</body>
+</html>

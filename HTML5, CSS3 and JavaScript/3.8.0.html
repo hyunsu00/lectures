@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>3.8.0 DOM(Document Object Model)</title>
+		<script type="text/javascript">
+			var documentNodes = document.documentElement;  // HTML
+			document.write("루트노드: " + documentNodes.nodeName + "<br />");
+			var htmlfirstChild = document.documentElement.firstChild;  // 첫 번째 자식노드 (HEAD)
+			document.write("첫 번째 자식노드: " + htmlfirstChild.nodeName + "<br/>");
+			var htmlnextSibling = document.documentElement.firstChild.nextSibling; // 첫 번째 자식노드의 형제노드 (BODY)
+			document.write("첫 번째 자식노드의 형제노드: " + htmlnextSibling.nodeName + "<br/>");
+			var htmllastChild = document.documentElement.lastChild; // 마지막 자식노드 (BODY)
+			document.write("마지막 자식노드: " + htmllastChild.nodeName + "<br/>");
+			var htmlchildNodes = document.documentElement.childNodes;  // HTML의 자식노드들 출력
+			document.write("루트노드의 자식노드들 출력" + "<br/>");
+			for (var i = 0, l = htmlchildNodes.length; i < l; i++) {
+				document.write(htmlchildNodes[i].nodeName+"<br/>");
+			}
+		</script>
+	</head>
+	<body>
+		<h1>Node에 대하여</h1>
+		<p>Node는 HTML의 요소(Element), 속성(Attribute) 등을 나타냅니다.</p>
+	</body>
+</html>

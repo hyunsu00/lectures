@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>3.7.1.3 키보드(Keyboard)와 관련된 이벤트 핸들러 속성</title>
+	<script type="text/javascript">
+		/*
+		이벤트 핸들러 속성		 설명
+		onkeydown							키보드의 자판키가 눌려졌을 때 발생하는 keydown 이벤트 처리
+		onkeypress						키보드의 자판키가 눌려지고 올라올 때 발생하는 keypress 이벤트 처리
+		onkeyup								눌려진 자판키가 올라올 때 발생하는 keyup 이벤트 처리
+		*/
+    function kpress() {
+      console.log("keypress 이벤트 발생");
+    }
+    function kdown() {
+      console.log("keydown 이벤트 발생");
+    }
+    function kup() {
+      console.log("keyup 이벤트 발생");
+    }     
+  </script>
+</head>
+<body>
+	<img src="flower2.jpg" /><br />
+  장소를 입력하세요. <br />
+  <input type="text" name="txtPlace" onkeypress="kpress()" onkeydown ="kdown()" onkeyup="kup()" >
+</body>
+</body>
+</html>

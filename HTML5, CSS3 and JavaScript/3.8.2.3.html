@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>3.8.2.3 removeChild() 메서드를 이용한 노드의 삭제</title>
+	</head>
+	<body>
+		<div id="software">
+			<p id="language">프로그래밍</p>
+			<p id="os">운영체제</p>
+			<p id="db">데이터베이스</p>
+		</div>
+		<!-- DOM 트리가 만들어 진후 처리해야함 -->
+		<script type="text/javascript">
+			/*
+			기존의 노드에 대한 삭제는 다음과 같은 형식의 removeChild() 메서드를 이용하며 
+			자식 노드의 삭제이므로 기본적으로 삭제되는 자식 노드(들)을 가진 부모 노드로부터 
+			호출되어야 합니다.
+
+				부모노드.removeChild(delNode)
+			*/
+			let parentNode = document.getElementById("software");
+			let delNode = parentNode.removeChild(document.getElementById("os"));
+			document.write("<br />삭제된 노드 : " + delNode.nodeName + " 삭제된 노드의 Text : "+ delNode.innerHTML);
+
+			if(parentNode.hasChildNodes()) {
+				document.write("<br />parentNode 노드에는 자식 노드가 존재합니다.");
+			}
+			if(parentNode.hasAttributes()) {
+				document.write("<br />div 노드에는 속성 노드가 존재합니다.");
+			} else {
+				document.write("<br />div 노드에는 속성 노드가 존재안함.");
+			}
+		</script>
+	</body>
+</html>
