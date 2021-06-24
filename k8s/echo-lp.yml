@@ -1,0 +1,24 @@
+# 정의    | 설명          | 예
+# version	  오브젝트 버전	  v1, app/v1, networking.k8s.io/v1, ...
+# kind	    종류	          Pod, ReplicaSet, Deployment, Service, ...
+# metadata	메타데이터	    name과 label, annotation(주석)으로 구성
+# spec	    상세명세	      리소스 종류마다 다름
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: echo-lp
+  labels:
+    app: echo
+spec:
+  containers:
+    - name: app
+      image: ghcr.io/subicura/echo:v1
+      livenessProbe:
+        httpGet:
+          path: /not/exist
+          port: 8080
+        initialDelaySeconds: 5
+        timeoutSeconds: 2 # Default 1
+        periodSeconds: 5 # Defaults 10
+        failureThreshold: 1 # Defaults 3

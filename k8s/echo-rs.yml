@@ -1,0 +1,28 @@
+# 정의            | 설명              | 예
+# version	        오브젝트 버전	      v1, app/v1, networking.k8s.io/v1, ...
+# kind	          종류	              Pod, ReplicaSet, Deployment, Service, ...
+# metadata	      메타데이터	        name과 label, annotation(주석)으로 구성
+# spec	          상세명세	          리소스 종류마다 다름
+# spec.selector	  label 체크 조건
+# spec.replicas	  원하는 Pod의 개수
+# spec.template	  생성할 Pod의 명세
+
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: echo-rs
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: echo
+      tier: app
+  template:
+    metadata:
+      labels:
+        app: echo
+        tier: app
+    spec:
+      containers:
+        - name: echo
+          image: ghcr.io/subicura/echo:v1
